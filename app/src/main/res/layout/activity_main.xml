@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingStart="8dp"
+	android:paddingEnd="8dp"
+	tools:context=".MainActivity">
+
+	<TextView
+		android:id="@+id/tvInstruction"
+		android:layout_width="337dp"
+		android:layout_height="wrap_content"
+		android:fontFamily="@font/poppinsbold"
+		android:text="First of the few steps to set you up with a Bank Account"
+		android:textAlignment="textStart"
+		android:textColor="@color/black"
+		android:textSize="20sp"
+		app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.505"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<LinearLayout
+		android:id="@+id/linearLayout"
+		android:layout_width="349dp"
+		android:layout_height="281dp"
+		android:orientation="vertical"
+		app:layout_constraintBottom_toTopOf="@+id/btnSub"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tvInstruction">
+
+		<TextView
+			android:id="@+id/tvPan"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/poppinsmedium"
+			android:text="PAN NUMBER"
+			android:textColor="@color/black"
+			android:textSize="15sp" />
+
+		<EditText
+			android:id="@+id/etPan"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dp"
+			android:background="@drawable/edit_text_style"
+			android:fontFamily="@font/poppinsmedium"
+			android:hint="PAN"
+
+			android:inputType="textCapCharacters"
+			android:maxLength="10"
+			android:textAllCaps="true"
+			android:textSize="25sp" />
+
+		<TextView
+			android:id="@+id/tvDob"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/poppinsmedium"
+			android:text="BIRTHDATE"
+			android:textColor="@color/black"
+			android:textSize="15sp" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<EditText
+				android:id="@+id/etDay"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/edit_text_style"
+				android:ems="2"
+				android:fontFamily="@font/poppinsmedium"
+				android:textColor="@color/black"
+				android:hint="DD"
+				android:inputType="number"
+				android:maxLength="2"
+				android:paddingRight="10dp"
+				android:textAlignment="center"
+				android:textSize="25sp" />
+
+			<EditText
+				android:id="@+id/etMonth"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/edit_text_style"
+				android:ems="2"
+				android:fontFamily="@font/poppinsmedium"
+				android:textColor="@color/black"
+				android:hint="MM"
+				android:inputType="number"
+				android:maxLength="2"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:textAlignment="center"
+				android:textSize="25sp" />
+
+			<EditText
+				android:id="@+id/etYear"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/edit_text_style"
+				android:ems="4"
+				android:fontFamily="@font/poppinsmedium"
+				android:textColor="@color/black"
+				android:hint="YYYY"
+				android:inputType="number"
+				android:maxLength="4"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:textAlignment="center"
+				android:textSize="25sp" />
+		</LinearLayout>
+
+
+	</LinearLayout>
+	>
+
+	<ImageView
+		android:id="@+id/imageView"
+		android:layout_width="54dp"
+		android:layout_height="62dp"
+		app:layout_constraintBottom_toTopOf="@+id/tvInstruction"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.042"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.677"
+		app:srcCompat="@drawable/proj_logo"
+		tools:layout_editor_absoluteX="8dp" />
+	
+	<Button
+		android:id="@+id/btnSub"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="4dp"
+		android:background="@drawable/button_style"
+		android:text="NEXT"
+		app:layout_constraintBottom_toTopOf="@+id/tvNoPan"
+		tools:layout_editor_absoluteX="8dp" />
+	
+	
+	<TextView
+		android:id="@+id/tvInfo"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="136dp"
+		android:fontFamily="@font/poppinsmedium"
+		android:text="@string/learn_more"
+		android:textAlignment="viewStart"
+		android:textColor="@color/grey"
+		android:textColorLink="@color/purple_defined"
+		app:layout_constraintBottom_toTopOf="@+id/btnSub"
+		app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+		app:layout_constraintVertical_bias="1.0"
+		tools:layout_editor_absoluteX="8dp" />
+	
+	<TextView
+		android:id="@+id/tvNoPan"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="16dp"
+		android:autoLink="web"
+		android:textColorLink="@color/purple_defined"
+		android:text="@string/no_pan"
+		android:textAlignment="center"
+		android:textColor="@color/purple_defined"
+		app:layout_constraintBottom_toBottomOf="parent"
+		tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
